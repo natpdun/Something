@@ -1,0 +1,33 @@
+string = input(prompt = "Enter a string:")
+cGuess = int(input(prompt = "How many consonants were in your string?"))
+vGuess = int(input(prompt = "How many vowels were in your string?"))
+
+
+string.lower()
+v = 0
+c = 0
+i = 0
+
+while i < len(string):
+  if string[i] == "a" or string[i] == "e" or string[i] == "i" or string[i] == "o" or string[i] == "u" or string[i] == "y":
+    v += 1
+  elif string[i] == " ":
+    v += 0
+  else:
+    c += 1
+  i += 1
+    
+cChecker()
+vChecker()
+    
+def cChecker():
+  if cGuess == c:   
+    print("Correct number of consonants")
+  else:
+    print("Incorrect number of consonants")
+   
+def vChecker():
+ if vGuess == v:
+   print("Correct number of vowels")
+ else:
+   print("Incorrect numbe of vowels")
